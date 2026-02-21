@@ -1,8 +1,9 @@
 import { SignIn } from "@clerk/nextjs";
-export const SignInPage=()=>{
-return(
-    <div className="flex justify-center items-baseline-last min-h-screen">
-        <SignIn/>
+
+export default function SignInPage() {
+  return (
+    <div className="flex min-h-screen items-start justify-center pt-7">
+      <SignIn />
     </div>
-)
+  );
 }

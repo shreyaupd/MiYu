@@ -27,7 +27,7 @@ export default function RootLayout({
       <body
         className={`${josefinSans.className} antialiased`}
       >
-        <Header/>
+        <Header isPro/>
         {children}
       </body>
     </html>
