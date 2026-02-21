@@ -1,7 +1,5 @@
 'use client';
 import {
-    SignInButton,
-    SignUpButton,
     SignedIn,
     SignedOut,
     UserButton,
@@ -57,14 +55,14 @@ const Header = ({isPro}:{isPro:boolean}) => {
                     <>
                         <div className='flex items-center space-x-4 px-4'>
                             {/* Show the sign-in and sign-up buttons when the user is signed out */}
-                            <SignedOut>
-                                <SignInButton />
-                                <SignUpButton>
-                                    <Button>
-                                        Sign Up
-                                    </Button>
-                                </SignUpButton>
-                            </SignedOut>
+                             <SignedOut>
+                            <Link href="/sign-in">
+                                <Button variant="ghost">Sign In</Button>
+                            </Link>
+                            <Link href="/sign-up">
+                                <Button>Sign Up</Button>
+                            </Link>
+                        </SignedOut>
                         </div>
                     </>
                 )}
