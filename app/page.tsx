@@ -9,24 +9,27 @@ import { CtaSection } from "@/components/landing/cta-section";
 import { Pricing } from "@/components/landing/pricing";
 import { StarsBackground } from "@/components/animate-ui/components/backgrounds/stars";
 export default function Home() {
-  const[showLoader,setShowLoader]= useState(true);
-  useEffect(()=>{
-      const timer= setTimeout(()=>{
-        setShowLoader(false);
-      },1000)
-      return ()=>clearTimeout(timer)
-  },[])
+  const [showLoader, setShowLoader] = useState(true);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowLoader(false);
+    }, 1000)
+    return () => clearTimeout(timer)
+  }, [])
 
   return (
     <div className="relative min-h-screen">
-       <StarsBackground>
-        <Hero/>
+      <StarsBackground
+        backgroundColor="bg-[radial-gradient(ellipse_at_bottom,_#fed7aa_0%,_#fff7ed_100%)]"
+        starColor="#f97316"
+      >
+        <Hero />
       </StarsBackground>
-       <Features/>
-       <HowItWorks/>
-       <Pricing/>
-       <CtaSection/>
-         {showLoader?<PricingLoader/>:<PricingTable/>}
+      <Features />
+      <HowItWorks />
+      <Pricing />
+      <CtaSection />
+      {showLoader ? <PricingLoader /> : <PricingTable />}
     </div>
   );
 }

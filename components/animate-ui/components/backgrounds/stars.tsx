@@ -77,6 +77,7 @@ type StarsBackgroundProps = React.ComponentProps<'div'> & {
   transition?: SpringOptions;
   starColor?: string;
   pointerEvents?: boolean;
+  backgroundColor?: string;
 };
 
 function StarsBackground({
@@ -87,6 +88,7 @@ function StarsBackground({
   transition = { stiffness: 50, damping: 20 },
   starColor = '#fff',
   pointerEvents = true,
+  backgroundColor = 'bg-[radial-gradient(ellipse_at_bottom,_#262626_0%,_#000_100%)]',
   ...props
 }: StarsBackgroundProps) {
   const offsetX = useMotionValue(1);
@@ -111,7 +113,8 @@ function StarsBackground({
     <div
       data-slot="stars-background"
       className={cn(
-        'relative size-full overflow-hidden bg-[radial-gradient(ellipse_at_bottom,_#262626_0%,_#000_100%)]',
+        'relative size-full overflow-hidden',
+        backgroundColor,
         className,
       )}
       onMouseMove={handleMouseMove}
