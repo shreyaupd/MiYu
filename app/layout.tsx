@@ -5,6 +5,7 @@ import {
 import { Josefin_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 const josefinSans = Josefin_Sans({
   variable: "--font-josefin-sans",
   subsets: ["latin"],
@@ -22,15 +23,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-      <ClerkProvider>
-        <html lang="en">
-      <body
-        className={`${josefinSans.className} antialiased`}
-      >
-        <Header isPro/>
-        {children}
-      </body>
-    </html>
-      </ClerkProvider>
+    <ClerkProvider>
+      <html lang="en">
+        <body
+          className={`${josefinSans.className} antialiased`}
+        >
+          <Header isPro />
+          {children}
+          <Footer />
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
