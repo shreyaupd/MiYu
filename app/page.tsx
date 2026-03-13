@@ -18,9 +18,9 @@ export default function Home() {
   }, [])
 
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen bg-linear-to-br from-pink-50 via-orange-50 to-pink-100 pt-20">
       <StarsBackground
-        backgroundColor="bg-[radial-gradient(ellipse_at_bottom,_#fed7aa_0%,_#fff7ed_100%)]"
+        backgroundColor="bg-transparent"
         starColor="#f97316"
       >
         <Hero />
