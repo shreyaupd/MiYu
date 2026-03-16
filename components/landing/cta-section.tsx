@@ -3,9 +3,9 @@ import { ArrowRight, Sparkles } from 'lucide-react';
 
 export const CtaSection = () => {
     return (
-        <section className="py-24 px-4 sm:px-6 lg:px-8">
+        <section className="py-24 bg-whitepx-4 sm:px-6 lg:px-8">
             <div className="max-w-5xl mx-auto">
-                <div className="relative overflow-hidden rounded-[3rem] bg-orange-500 px-8 py-20 text-center shadow-2xl sm:px-16">
+                <div className="relative overflow-hidden rounded-[3rem] bg-orange-500/50 px-8 py-20 text-center shadow-2xl sm:px-16">
                     {/* Decorative background elements */}
                     <div className="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-orange-500 rounded-full blur-3xl opacity-50" />
                     <div className="absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2 w-96 h-96 bg-orange-400 rounded-full blur-3xl opacity-30" />

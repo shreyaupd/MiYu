@@ -12,7 +12,7 @@ import { useUser } from '@clerk/nextjs'
 import { Badge } from "../ui/badge";
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import { Trophy, Users, MessageCircle } from 'lucide-react'; // Change this import
+import { Trophy, Users, MessageCircle } from 'lucide-react'; 
 const Header = ({isPro}:{isPro:boolean}) => {
     const { isSignedIn } = useUser();
     const headerRef = useRef<HTMLDivElement>(null);

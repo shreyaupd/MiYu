@@ -63,7 +63,7 @@ export const Features = () => {
     ,[]);
 
     return(
-        <div  className='flex flex-col items-center mt-10'>
+        <div  className='flex flex-col bg-transparent items-center pt-10'>
             <h2 className='text-6xl font-bold mb-16 text-orange-600'>Features</h2>
             <div className='min-h-screen min-w-full p-8 flex justify-center items-center'>
                 <div className='max-w-7xl mx-auto'>
